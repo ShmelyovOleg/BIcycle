@@ -1,0 +1,366 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Lato";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1130;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	font-size: 14px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+;
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+
+@import "header";
+@import "footer";
+@import "ibg";
+
+@import "slick";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+// ._ibg{
+// 	background-position: center;
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// 	position: relative;
+// 	& img{
+// 		// display: none;
+// 		width: 0;
+// 		height: 0;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		opacity: 0;
+// 		visibility: hidden;
+// 	}
+// }
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	font-size: 0;
+	flex-direction: column;
+}
+.content{
+	font-size: 20px;
+}
+.main-screen {
+	flex:1 0 100% ;
+	position: relative;
+		&__bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// background-image: url("../img/bg_img.jpg");
+		}
+}
+
+.generation {
+	background-color: #f7f7f7;
+	padding: 120px 0;
+	@media (max-width:900px) {
+		padding: 80px 0;
+	}
+	@media (max-width:600px) {
+		padding: 30px 0;
+	}
+}
+.container {
+	// max-width: 1130px;
+ 	padding: 0px 15px;
+ 	margin: 0px auto; 
+}
+.block {
+	text-align: center;
+	&__icon {
+		margin: 0 0 30px 0;
+	}
+
+	&__title {
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3.6px;
+		margin: 0 0 18px 0;
+		line-height: 24px;
+	}
+
+	&__text {
+		color: #848789;
+		font-size: 18px;
+		line-height: 34px;
+		&_j {
+			color: #848789;
+			font-size: 16px;
+			line-height: 30px;
+			text-align: justify;
+			&::after{
+				content: '';
+				width: 50px;
+				height: 1px;
+				background-color: #d7d7d7;
+				display: block;
+				margin: 35px auto 0px auto;
+			}
+		}
+	}
+	@media (max-width:1500px){
+		&__text{
+			&_j{
+				&:after{
+					margin:15px auto 0px auto;
+				}
+			}
+		}
+	}		
+}
+
+.brands {
+	&__rev {
+		.brands__column{
+			@include flexorder(1);
+			&_b{
+				@include flexorder(2);
+			}
+		}
+		// .item__image{
+		// 	background-image: url(../img/blocks/block_4.jpg);
+		// }
+		// .brands__image{
+		// 	background-image: url(../img/blocks/block_3.jpg);
+		// 	padding: 0 0 37.51% 0;
+		// }
+	}
+	// &__last{
+	// 	.brands__column{
+	// 		&_first{
+	// 			.item__image{
+	// 				background-image: url(../img/blocks/block_5.jpg);
+	// 			}
+	// 		}
+	// 		&_second{
+	// 			.brands__image{
+	// 				background-image: url(../img/blocks/block_6.jpg);
+	// 			}
+	// 		}
+	// 		&_third{
+	// 			.item__image{
+	// 				background-image: url(../img/blocks/block_7.jpg);
+	// 			}
+	// 		}
+	// 	}
+	// }
+	&__block{
+		position: relative;
+	}
+		
+
+	&__row {
+		@include flexbox();
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		&_b {
+			flex: 0 1 66.667%;
+		}
+
+	}
+
+	
+
+	&__content {
+		padding: 70px 65px 55px 65px;
+		position: relative;
+		&::after{
+			content:'';
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			margin:  0 0 0 -10px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #fff;
+			z-index: 2;	
+		}
+	}
+
+	&__image {
+		padding: 0 0 37.51% 0;
+		// background-image: url(../img/blocks/block_2.jpg);
+	}
+	@media(max-width:1500px) {
+		&__content{
+			padding: 40px 35px 30px 35px; ;
+		}
+	}
+	@media (max-width:1100px) {
+		&__last{
+			.brands__column{
+				&_first{
+					@include flexorder(2);
+				}
+				&_second{
+					@include flexorder(1);
+				}
+				&_third{
+					@include flexorder(3);
+				}
+			}
+		}
+		&__row{
+			flex-direction: column;
+		}
+	}
+}
+.item {
+	position: relative;
+	display: block;
+	height: 100%;
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include flexbox();
+		@include anim(0.3s,0s);
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+		background-color: rgba(100, 194, 158, 0.5);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		// background-image: url('../img/blocks/block_1.jpg');
+	}
+	&:hover{
+		.item__logo{
+		opacity: 1;
+		visibility: visible;
+		}
+	}
+	@media (max-width:1100px) {
+		height: auto;
+		padding: 0 0 70% 0;
+	}
+
+}
+//============================================Slider=============================================================
+.slider {
+	padding: 120px 0 60px 0;
+	background-color: #f7f7f7;
+
+	&__item {
+		text-align: center;
+	}
+
+	&__icon {
+		margin: 0 0 35px 0;
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+		color: #353738;
+		font-family: Lato;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 1.8px;
+		span{
+			color: #848789;
+			font-weight: 300;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		color: #848789;
+		font-family: Lato;
+		font-size: 24px;
+		font-style: italic;
+		line-height: 34px;
+	}
+}
