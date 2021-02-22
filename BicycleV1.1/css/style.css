@@ -197,6 +197,76 @@ body._lock {
   letter-spacing: 2.6px;
 }
 
+.footer {
+  background-color: #f7f7f7;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  padding: 100px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.footer__address {
+  color: #848789;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.footer__address p:first-child {
+  font-weight: 700;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__link {
+  margin: 0 7.5px;
+}
+
+.dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dev__text {
+  font-size: 13.9px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: #848789;
+  padding: 0 9px 0 0;
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
@@ -428,6 +498,10 @@ body._lock {
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -443,6 +517,15 @@ body._lock {
   visibility: hidden;
 }
 
+.item__logo span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 0 0 0;
+}
+
 .item__image {
   position: absolute;
   width: 100%;
@@ -454,6 +537,10 @@ body._lock {
 .item:hover .item__logo {
   opacity: 1;
   visibility: visible;
+}
+
+.some-slider {
+  background-color: #f7f7f7;
 }
 
 .slider {
@@ -492,6 +579,139 @@ body._lock {
   line-height: 34px;
 }
 
+.shop__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.shop__colomn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 16.666%;
+          flex: 0 1 16.666%;
+}
+
+.shop__colomn_b {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.shop__footer {
+  background-color: #282f35;
+  padding: 75px 0;
+  text-align: center;
+}
+
+.shop__btn {
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  height: 50px;
+  display: inline-block;
+  line-height: 48px;
+  color: #fff;
+  letter-spacing: 2.8px;
+  padding: 0 60px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.block-shop {
+  height: 100%;
+}
+
+.block-shop__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.block-shop__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.block-shop__item {
+  height: auto;
+  padding: 0px 0 50% 0;
+}
+
+.block-shop__item_b {
+  padding: 0 0 200.5% 0;
+}
+
+.block-shop__item_l {
+  padding: 0 0 100% 0;
+}
+
+.subscribe__body {
+  max-width: 534px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 119px 0;
+}
+
+.subscribe__logo {
+  margin: 0 0 39px 0;
+}
+
+.subscribe__label {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  font-style: italic;
+  color: #848789;
+  margin: 0 0 35px 0;
+}
+
+.subscribe__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.subscribe__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 8px 0 0;
+}
+
+.subscribe__input .input {
+  width: 100%;
+  height: 69px;
+  background-color: #ffffff;
+  border: 1px solid #d3d7d9;
+  font-family: Lato;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: #929292;
+  padding: 0 28px;
+}
+
+.subscribe__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 126px;
+          flex: 0 0 126px;
+}
+
+.subscribe__btn {
+  width: 100%;
+  height: 69px;
+  background-color: #64c29e;
+  line-height: 69px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 @media (max-width: 1500px) {
   .block__text_j:after {
     margin: 15px auto 0px auto;
@@ -509,6 +729,10 @@ body._lock {
 }
 
 @media (max-width: 1100px) {
+  .footer {
+    padding: 50px 0;
+  }
+
   .slick-slider .slick-dots {
     padding: 50px 0px 0px 0px;
   }
@@ -540,7 +764,47 @@ body._lock {
 
   .item {
     height: auto;
-    padding: 0 0 70% 0;
+    padding: 0 0 50% 0;
+  }
+
+  .shop__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .shop__colomn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .shop__colomn:first-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .shop__colomn:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .shop__btn {
+    padding: 0 30px;
+  }
+
+  .shop__footer {
+    padding: 50px 0;
+  }
+
+  .block-shop__item_b {
+    height: 100%;
+    padding: 0 0 200.5% 0;
+  }
+
+  .block-shop__item_l {
+    padding: 0 0 100% 0;
   }
 }
 
@@ -698,8 +962,44 @@ body._lock {
   }
 }
 
+@media (max-width: 750px) {
+  .subscribe__body {
+    padding: 50px 0;
+  }
+}
+
 @media (max-width: 600px) {
+  .footer {
+    padding: 0px 0;
+  }
+
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__address {
+    padding: 0;
+  }
+
+  .footer__social {
+    padding: 15px 0;
+  }
+
   .generation {
     padding: 30px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .subscribe__form {
+    display: block;
+  }
+
+  .subscribe__input {
+    padding: 0 0 8px 0;
   }
 }

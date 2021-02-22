@@ -79,3 +79,4 @@ if($('.slider__body').length>0){
 $(document).ready(function () {
     $('.slider').slick();
 });
+
